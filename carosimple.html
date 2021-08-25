@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Caro Game Simple</h3>
+<p id="carogame"></p>
+<input type="button" value="Change Value" onclick="changevalue()">
+<script>
+    let a=document.getElementById("carogame");
+    let arrayoutside=[];
+    let data="";
+    for(let i=0;i<5;i++){
+        arrayoutside[i]=new Array(0,0,0,0,0);
+    }
+    for(let i=0;i<5;i++){
+        data += "<br/>";
+        for(let j=0;j<5;j++){
+            data += arrayoutside[i][j] + "&nbsp;&nbsp;";
+        }
+    }
+    data+="<br/><br/><input type='button' value='Change Value' onclick='changevalue()'>"
+    a.innerHTML=data;
+    function changevalue(){
+        let rawposition=prompt("raw coordinate is?");
+        let colposition=prompt("column coordinate is?");
+        data="";
+        arrayoutside[rawposition][colposition]="x";
+        for(let i=0;i<5;i++){
+            data+="<br>";
+            for(let j=0;j<5;j++){
+                data+=arrayoutside[i][j]+"&nbsp;&nbsp;&nbsp;&nbsp;"
+            }
+        }
+        data+="<br><br><input type='button' value='Change Value' onclick='changevalue()'>"
+        a.innerHTML="<br>"+data;
+    }
+</script>
+</body>
+</html>

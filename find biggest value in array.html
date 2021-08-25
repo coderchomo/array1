@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let testarray=[11,7,19,95,88,420];
+    let max=testarray[0];
+    let index=0;
+    for(let i=1;i<=(testarray.length-1);i++){
+        if(max<testarray[i]){
+            max=testarray[i];
+           index=i;
+        }
+    }
+    alert("Biggest number is : "+max+" in position number "+index);
+</script>
+</body>
+</html>
